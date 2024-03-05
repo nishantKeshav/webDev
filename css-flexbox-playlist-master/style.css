@@ -1,0 +1,44 @@
+* {
+  font-family: verdana;
+  margin: 0;
+}
+
+body {
+  background: #eee;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 100px;
+  max-width: 960px;
+  margin: 0;
+}
+.flex-container {
+  display: flex;
+  /* flex-direction: column; */
+  background-color: white;
+  flex-wrap: wrap;
+}
+.box {
+  height: 100px;
+  /* width: 320px; */
+  /* min-width: 200px; */
+  /* flex-basis: 200px; */
+  /* flex-grow: 1; */
+  flex: 1 0 200px;
+}
+.one {
+  /* flex-shrink: 1; */
+  /* flex-grow: 1; */
+  background-color: aqua;
+}
+.two {
+  /* flex-shrink: 2; */
+  /* flex-grow: 2; */
+  background-color: firebrick;
+}
+.three {
+  /* flex-shrink: 3; */
+  /* flex-grow: 3; */
+  background-color: dodgerblue;
+}

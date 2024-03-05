@@ -1,0 +1,337 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+    <script src="https://kit.fontawesome.com/c7c760635c.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Poppins, monospace;
+            scroll-behavior: smooth;
+            transition: 0.3s;
+        }
+        header {
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+            background: #0e2d4d;
+            color: rgb(255, 255, 255);
+            padding: 0px 20px;
+            border: 1px solid black;
+            margin-bottom: 5px;
+        }
+        .nav-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+        }
+        .nav-container a {
+            color: red;
+            padding: 10px;
+            /* border: 1px solid black; */
+            margin-left: 3px;
+            margin-right: 2px;
+            text-decoration: none;
+            transition: 0.4s;
+        }
+        .nav-container a:hover {
+            text-decoration: overline;
+            color: aquamarine;
+        }
+        .head {
+            display: grid;
+            grid-template-columns: repeat( 7, 1fr);
+            grid-template-rows: repeat(2, minmax(10px , auto));
+            /* border: 1px solid black; */
+        }
+        .head i {
+            grid-column: 1 / 3;
+            font-size: 50px;
+            text-align: left;
+            padding-left: 15px;
+            color: rgb(255, 38, 0);
+            /* border: 1px solid black; */
+        }
+        .header-heading {
+            grid-column: 3 / 7;
+            text-align: left;
+            padding-left: 170px;
+            padding-bottom: 20px;
+            font-family: monospace;
+            font-size: 40px;
+            color: aliceblue;
+            /* border: 1px solid black; */
+        }
+        main {
+            position: relative;
+            top: 110px;
+        }
+        .in {
+            text-align: center;
+        }
+        .in h2 {
+            padding-top: 40px;
+            font-size: 30px;
+            /* text-decoration: underline; */
+        }
+        .in form input {
+            margin-top: 25px;
+            width: 300px;
+            height: 50px;
+            border-radius: 5px;
+            margin-right: 2px;
+            /* border: none; */
+        }
+        .in form input[type='email'] {
+            background-color: aliceblue;
+            padding: 10px;
+            font-size: 15px;
+        }
+        .in form button {
+            background-color: rgb(255, 0, 0);
+            color: whitesmoke;
+            transition: 0.4s;
+            margin-left: 3px;
+            position: relative;
+            padding: 10px;
+            bottom: 1px;
+            font-size: medium;
+            width: 130px;
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        .in form button:hover {
+            background-color: rgb(0, 151, 0);
+            color: rgb(27, 27, 27);
+        }
+        .Features {
+            max-width: 80%;
+            padding-top: 50px;
+        }
+        .Features ul li {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .Features ul li h4 {
+            text-align: left;
+        }
+        .Features ul li p {
+            text-align: left;
+        }
+        .pricing-container {
+            margin-top: 60px;
+            max-width: 75%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .part {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            border: 1px solid black;
+            border-radius: 7px;
+            width: 250px;
+            background-color: antiquewhite;
+        }
+        .part h4 {
+            font-size: x-large;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .part p {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: large;
+        }
+        .part ul li {
+            text-align: left;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 15px;
+        }
+        .pricing-button {
+            margin-top: 20px;
+            width: 70%;
+            height: 40px;
+            border-radius: 4px;
+            border: 1px solid black;
+            font-size: large;
+            margin-bottom: 15px;
+            cursor: pointer;
+            background-color: rgb(249, 252, 62);
+            color: rgb(42, 42, 43);
+            transition: 0.3s;
+        }
+        .pricing-button:hover {
+            background-color: brown;
+            color: white;
+        }
+        .footer {
+            margin-top: 50px;
+            background: #0e2d4d;
+            font-size: 17px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .footer-container {
+            /* padding: 10px; */
+            display: flex;
+            justify-content: end;
+            margin-bottom: 15px;
+            
+        }
+        .footer-container a {
+            text-decoration: none;
+            margin-left: 10px;
+            margin-right: 10px;
+            color: rgb(255, 25, 25);
+            transition: 0.3s;
+        }
+        .footer-container a:hover {
+            color: aquamarine;
+            text-decoration: underline;
+        }
+        .footer p {
+            color: rgb(0, 199, 0);
+            text-align: right;
+        }
+        .howitworks {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .howitworks iframe {
+            padding: 0;
+            /* border: 2px solid black; */
+            border-radius: 10px;
+        }
+        .img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <header id = "header">
+        <div class = "nav-container">
+            <a href = "#Features">Features</a>
+            <a href = "#howitworks">How it works</a>
+            <a href = "#Pricing">Pricing</a>
+        </div>
+        <nav class = "head">
+            <i class="fa-solid fa-wifi"></i>
+            <h1 class = "header-heading">Wiquency WIFI</h1>
+        </nav>
+    </header>
+    <main>
+        <img id = "header-img" class = "img" src = "https://textures.world/wp-content/uploads/2018/10/Seamless-White-Wood-Texture-8-copy.jpg">
+        <section class = "in">
+            <h2>Complete Wireless Fidelity For 5G</h2>
+            <form action = "https://www.freecodecamp.com/email-submit">
+                <input id="email" type="email" placeholder="Enter your email address" required/>
+                <button id = "submit" class = "submit">Get started</button>
+            </form>
+        </section>
+        <center>
+        <section class = "Features" id = "Features">
+            <ul>
+                <li><h4> High Capacity Load Balancing</h4><p>Wireless networks were originally planned for coverage only, but with all the smartphones, tablets, laptops etc. out there--today’s wireless networks must be planned for capacity.
+                    With the increased demand on both your wireless and wired infrastructure, you must incorporate high capacity load balancing.
+                    This means, when one access point is overloaded, the system will actively shift users from one access point to another depending on the capacity that is available.</p></li>
+                              <li><h4>Network Management System</h4><p>Modern day wireless networks are much more complex and may consist of hundreds or even thousands of access points, switches, firewalls, managed power and various other components.
+                    You need to have a smarter way of managing the entire network from a centralized point. Deploying a network management system gives you that ability and so much more.</p></li>
+                              <li><h4>Network Access Control</h4><p>Whether you refer to it as mobile device registration or network access control, it is essential to have a secure method for registering and securing the devices that you don't own.
+                    Primarily, NAC controls the role of the user and enforces policies. Network access control can allow your users to register themselves to the network--a helpful feature that enhances the user experience.</p></li>
+                              <li><h4>Ability to communicate with both 2.4 GHz devices and 5 GHz devices</h4><p>Baby scanners, blue tooth, microwaves, and many of today’s common use devices can interfere with users on 2.4 GHz devices--simply put, it’s a “crowded spectrum”. Since many devices still operate in that spectrum, you’ll need dual radio access points that can manage users on<br> both 2.4 GHz and 5 GHz at the same time.</p></li>
+                              <li><h4>Mobile Device Management</h4><p>Think about how many mobile devices will be accessing your wireless network; now think about the thousands of applications you’re going to have running on those mobile devices.                    
+                    How do you plan on managing all of this, especially as devices come and go from your business.<br>
+                    Mobile device management can provide control of how you will manage access to applications and programs. You can even remotely wipe the device if it’s lost or stolen.</p></li>
+                              <li><h4> Adaptive Radio Management</h4><p>Technical expertise is both expensive and hard to find; it takes years of training and experience to know how to get it right—that’s time and money most businesses just don’t have.
+                    Adaptive radio management or ARM, is like having an RF or WiFi expert on site that helps to maximize performance for your end-users.
+                    It does this by collecting RF data from your access points and then using that data to make intelligent decisions about power levels, channels, air-time fairness, client-loads and even roaming.</p></li></em>
+            </ul>
+        </section>
+        <section id="howitworks" class = "howitworks">
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/hePLDVbULZc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        <section id = "Pricing">
+            <div class = "pricing-container">
+                <div class = "part">
+                    <h4>Basic Plan</h4>
+                    <hr>
+                    <p class="price"> $29.99 for 1 Month</p>
+                    <ul class="price-list">
+                      <li class="price-list-item">Speed - 15Mbps</li>
+                      <li class="price-list-item">FUP Limit - 100GB</li>
+                      <li class="price-list-item">SpeedPost FUP - 1Mbps</li>
+                      <li class="price-list-item">Free Installation </li>
+                    </ul>
+                    <button class = "pricing-button">Select</button>
+                </div>
+                <div class = "part">
+                    <h4>Basic Plan</h4>
+                    <hr>
+                    <p class="price"> $29.99 for 1 Month</p>
+                    <ul class="price-list">
+                      <li class="price-list-item">Speed - 15Mbps</li>
+                      <li class="price-list-item">FUP Limit - 100GB</li>
+                      <li class="price-list-item">SpeedPost FUP - 1Mbps</li>
+                      <li class="price-list-item">Free Installation </li>
+                    </ul>
+                    <button class = "pricing-button">Select</button>
+                </div>
+                <div class = "part">
+                    <h4>Basic Plan</h4>
+                    <hr>
+                    <p class="price"> $29.99 for 1 Month</p>
+                    <ul class="price-list">
+                      <li class="price-list-item">Speed - 15Mbps</li>
+                      <li class="price-list-item">FUP Limit - 100GB</li>
+                      <li class="price-list-item">SpeedPost FUP - 1Mbps</li>
+                      <li class="price-list-item">Free Installation </li>
+                    </ul>
+                    <button class = "pricing-button">Select</button>
+                </div>
+                <div class = "part">
+                    <h4>Basic Plan</h4>
+                    <hr>
+                    <p class="price"> $29.99 for 1 Month</p>
+                    <ul class="price-list">
+                      <li class="price-list-item">Speed - 15Mbps</li>
+                      <li class="price-list-item">FUP Limit - 100GB</li>
+                      <li class="price-list-item">SpeedPost FUP - 1Mbps</li>
+                      <li class="price-list-item">Free Installation </li>
+                    </ul>
+                    <button class = "pricing-button">Select</button>
+                </div>
+            </div>
+        </section>
+    </center>
+        <footer class = "footer">
+            <div class = "footer-container">
+                <a href = "#">Privacy</a>
+                <a href = "#">Terms</a>
+                <a href = "#">Contact</a>
+            </div>
+            <p>Copyright 2020, Wiquency WIFI</p>
+        </footer>
+    </main>
+</body>
+</html>

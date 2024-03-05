@@ -1,0 +1,229 @@
+<!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+<!DOCTYPE html>
+<htmL>
+
+<head>
+    <title> Survey Form </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Yanone+Kaffeesatz:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,200&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
+
+        body {
+            background: url('https://image.freepik.com/free-photo/white-wall_1194-5956.jpg');
+            color: rgb(1, 7, 1);
+            font-size: 26px;
+            font-family: Ubuntu Condensed, sans-serif;
+        }
+
+        .options {
+            font-family: 'Ubuntu', sans-serif;
+            color: rgb(0, 0, 0);
+            width: 90px;
+            height: 30px;
+        }
+
+        .img1 {
+            border-color: black;
+            border-width: 4px;
+            border-style: solid;
+            border-radius: 50px;
+            display: block;
+            max-width: 50%;
+            margin: auto;
+            width: 500px;
+            
+        }
+        .img1:hover {
+            transform: scale(0.9);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.59), 0 6px 6px rgba(0,0,0,0.43);
+        }
+
+        .img2 {
+            border-color: black;
+            border-width: 4px;
+            border-style: solid;
+            border-radius: 50px;
+            display: block;
+            max-width: 50%;
+            margin: auto;
+            width: 500px;
+        }
+
+        .box {
+            color: rgb(0, 0, 0);
+            font-size: 26px;
+            border-radius: 20px;
+            width: 800px;
+            background-color: rgb(5, 243, 184);
+            opacity: 0.8;
+            border: 7px solid rgb(235, 150, 150);
+            padding: 50px;
+            margin: 20px;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+            margin-bottom: 0.5rem;
+        }
+
+        .email,
+        .name {
+            text-align: left;
+            width: 600px;
+            height: 40px;
+            border-radius: 12px;
+        }
+
+        .age {
+            text-align: left;
+            width: 600px;
+            height: 40px;
+            border-radius: 15px;
+        }
+
+        button {
+            font-size: 25px;
+            display: block;
+            width: 100%;
+            background: rgb(241, 40, 40);
+            cursor: pointer;
+            font-family: monospace;
+            border-radius: 50px;
+            height: 50px;
+        }
+
+        button:hover {
+            background: rgb(36, 116, 245);
+            transform: scale(1.1);
+        }
+
+        h1,
+        h4 {
+            font-family: 'Zilla Slab';
+            text-align: center;
+        }
+
+        .options {
+            width: 300px;
+            height: 40px;
+            border-radius: 12px;
+        }
+
+        .textarea {
+            border-radius: 10px;
+            font-family: monospace;
+            font-size: 20px;
+        }
+
+        form {
+            color: rgb(0, 0, 0)
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title"><u> Survey Form </u></h1>
+    <h4> Thank you for taking the time to help us improve the platform, Let us know how we can improve our service </h4>
+    <img class="img1" src="https://i.pinimg.com/originals/18/9d/dc/189ddc1221d9c1c779dda4ad37a35fa1.png" alt="scdno">
+    <br>
+    <!-- <hr> -->
+    <!-- <img class ="img2" src="https://images.unsplash.com/photo-1582588678413-dbf45f4823e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=701&q=80" alt="somcs"> -->
+    <!-- <img class ="img3" src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="sin"> -->
+    <!-- <fieldset class= "box"> --> 
+    <center>
+        <div class="box">
+            <form class="f" id="survey-form">
+                <label id="name-label"> Name : </label>
+                <input id="name" class="name" type="text" placeholder="Enter Your Name....." required></input><br><br>
+                <label id="email-label"> Email : </label>
+                <input id="email" class="email" type="email" placeholder="Enter Your Email Address....."
+                    required></input><br><br>
+                <label id="number-label"> Age : &nbsp; </label>
+                <input min="10" max="99" id="number" class="age" type="number" placeholder=" Eg : 29 "
+                    required></input><br><br><br>
+                <label for="dropdown" id="food"> Considering your complete experience with our Product, how likely would
+                    you be to recommend our product to a friend or
+                    colleague?</label><br>
+                <select class="options" id="dropdown">
+                    <option value="1"> 1 </option><br>
+                    <option value="2"> 2 </option><br>
+                    <option value="3"> 3 </option><br>
+                    <option value="4"> 4 </option><br>
+                    <option value="5"> 5 </option><br>
+                    <option value="6"> 6 </option><br>
+                    <option value="7"> 7 </option><br>
+                    <option value="8"> 8 </option><br>
+                    <option value="9"> 9 </option><br>
+                    <option value="10"> 10 </option><br>
+                </select><br>
+                <ol>
+                    <div class="size">
+                        <li><label> &nbsp; How long have you used our Product?</label></li><br>
+                        <label><input type="radio" name="radio-buttons" value="1"> Less than 1 month </label>
+                        <label><input type="radio" name="radio-buttons" value="1"> 1 to 6 months </label>
+                        <label><input type="radio" name="radio-buttons" value="1"> 6 months to 1 year </label>
+                        <label><input type="radio" name="radio-buttons" value="1"> 1 to 2 years </label>
+                        <label><input type="radio" name="radio-buttons" value="1"> 2 years or more </label><br>
+                        <li><label> &nbsp; How often do you use our product? </label></li><br>
+                        <label><input type="radio" name="radio-buttons" value="1"> Once a week or more often </label>
+                        <label><input type="radio" name="radio-buttons" value="1"> 2 to 3 times a month </label>
+                        <label><input type="radio" name="radio-buttons" value="1" > Once a month </label>
+                        <label><input type="radio" name="radio-buttons" value="1" > Every 2-3 months </label>
+                        <label><input type="radio" name="radio-buttons" value="1" > 2-3 times a year </label>
+                        <label><input type="radio" name="radio-buttons" value="1" > Once a year or less often </label>
+                        <label><input type="radio" name="radio-buttons" value="1" > Do not use </label><br>
+                        <li><label> &nbsp; Compared to products offered by our competitors, would you say that our
+                                product is: </label></li><br>
+                        <label><input type="radio" name="radio-buttons" value="1" > Much better </label>
+                        <label><input type="radio" name="radio-buttons" value="1"> Somewhat better </label>
+                        <label><input type="radio" name="radio-buttons" value="1" > Almost same </label>
+                        <label><input type="radio" name="radio-buttons" value="1" > Somewhat worse </label>
+                        <label><input type="radio" name="radio-buttons" value="1" > Much worse </label>
+                        <label><input type="radio" name="radio-buttons" value="1" > Don't know or never used </label><br>
+                        <li><label> &nbsp; Will you use or purchase our product again? </label> </li><br>
+                        <label><input type="radio" name="radio-buttons" value="1" > Definitely used </label>
+                        <label><input type="radio" name="radio-buttons" value="1" > Probably </label>
+                        <label><input type="radio" name="radio-buttons" value="1" > Might or might not </label>
+                        <label><input type="radio" name="radio-buttons" value="1" > Probably will not use </label>
+                        <label><input type="radio" name="radio-buttons" value="1" > Definitely not used </label>
+                        <label><input type="radio" name="radio-buttons" value="1" > Never used </label><br>
+                        <li> <label> &nbsp; When you contacted our customer service team, were all issues resolved to
+                                your complete satisfaction? </label></li><br>
+                        <label><input type="radio" name="radio-buttons" value="1" > Yes, by the company or its representatives
+                        </label>
+                        <label><input type="radio" name="radio-buttons" value="1" > Yes, by me or someone outside the company
+                        </label>
+                        <label><input type="radio" name="radio-buttons" value="1" > No, the problem was not resolved </label>
+                        <label><input type="radio" name="radio-buttons" value="1" > No problems/No contact with customer service
+                        </label><br>
+                        <li> <label> &nbsp; What would you like to improve in our webpage? </label> </li><br>
+                        <label><input type="checkbox" value="1"> Design </label>
+                        <label><input type="checkbox" value="1"> More Feedback Options </label>
+                        <label><input type="checkbox" value="1"> Better Colors </label>
+                        <label><input type="checkbox" value="1"> Better BackGround </label>
+                        <label><input type="checkbox" value="1"> Better Fonts and Formatting </label>
+                    </div>
+                </ol>
+                <br>
+                <p id="description"> Would you like to mention anything specific in your experience with our product
+                    which was not asked in the survey? </p><br>
+                <textarea class="textarea" name="instructions" rows="10" cols="70.5"
+                    placeholder="Enter Your Comment...">
+            </textarea>
+                <br><br><br><br>
+                <div class="submit-button">
+                    <button id="submit">
+                        <center>Submit</center>
+                    </button>
+            </form>
+            <br><br>
+        </div>
+    </center>
+    <!-- </fieldset> -->
+</body>
+
+</html>

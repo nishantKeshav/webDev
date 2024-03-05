@@ -1,0 +1,42 @@
+* {
+  font-family: verdana;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eee;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 360px;
+  margin: 0;
+}
+
+/* menu base styles */
+nav {
+  background: #333;
+}
+nav ul {
+  justify-content: space-between;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+nav a {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  color: aqua;
+  padding: 10px;
+}
+nav li {
+  flex: 1 1 0;
+}
+nav li:hover {
+  background-color: rgb(71, 70, 70);
+  text-decoration: overline;
+}
+/* flex styles */
